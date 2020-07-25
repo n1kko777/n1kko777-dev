@@ -1,0 +1,24 @@
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    &-wrapper {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        max-width: 579px;
+        max-height: 571px;
+        border-radius: 36px;
+        background: linear-gradient(90deg, #3DDEED 0%, #CB00DD 99.66%, #CB00DD 100%);
+        border: 1px solid transparent;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 36px;
+        }
+    }
+}

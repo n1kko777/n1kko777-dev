@@ -1,6 +1,7 @@
 .slider {
     position: relative;
     padding: 50px 0;
+    margin-top: -50px;
     overflow: hidden;
     background-image: url("data:image/svg+xml,%3Csvg width='160' height='880' viewBox='0 0 160 880' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M157.553 880C62.1869 782.096 0 621.506 0 440C0 258.494 62.1869 97.9042 157.553 0H159.553C64.1869 97.9042 2 258.494 2 440C2 621.506 64.1869 782.096 159.553 880H157.553Z' fill='url(%23paint0_linear)'/%3E %3Cdefs%3E %3ClinearGradient id='paint0_linear' x1='79.7767' y1='0' x2='79.7767' y2='880' gradientUnits='userSpaceOnUse'%3E %3Cstop stop-color='%233DDEED' stop-opacity='0.1'/%3E %3Cstop offset='0.182292' stop-color='%2357B6EA'/%3E %3Cstop offset='0.817708' stop-color='%23B128E0'/%3E %3Cstop offset='1' stop-color='%23CB00DD' stop-opacity='0.1'/%3E %3C/linearGradient%3E %3C/defs%3E %3C/svg%3E ");
     background-position: 65% 0;

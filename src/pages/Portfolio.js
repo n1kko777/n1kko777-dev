@@ -100,7 +100,7 @@ export const Portfolio = () => {
         </div>
       </main>
 
-      <Mouse link="/portfolio" />
+      <Mouse link="/contacts" />
     </Container>
   );
 };
