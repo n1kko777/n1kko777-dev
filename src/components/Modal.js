@@ -18,6 +18,10 @@ export const Modal = ({ show = false, onImgClose, img = {} }) => {
           ×
         </span>
         <img src={img.url} alt={img.alt} className="modal__content" />
+        <div
+          className="modal__caption"
+          dangerouslySetInnerHTML={{ __html: img.alt }}
+        ></div>
       </div>
     </div>
   );

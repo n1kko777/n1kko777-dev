@@ -33,6 +33,26 @@
 
         transition: right $duration;
 
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: linear-gradient(121.29deg, rgba(24, 17, 47, 0.3) 0%, rgba(24, 17, 47, 0) 71.88%);
+            transition: all $duration;
+        }
+
+
+        &:hover {
+            &::before {
+                background: none !important;
+            }
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -120,26 +140,10 @@
     }
 
     .slick-slide:not(.slick-active)+.slick-active .slider__item::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
         background: linear-gradient(180deg, rgba(24, 17, 47, 0.7) 0%, rgba(255, 255, 255, 0) 70.31%);
     }
 
     .slick-current+.slick-active .slider__item::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
         background: linear-gradient(0deg, rgba(24, 17, 47, 0.7) 0%, rgba(24, 17, 47, 0) 69.79%);
     }
 }
