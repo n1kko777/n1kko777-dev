@@ -1,0 +1,13 @@
+.author {
+    margin-top: 80px;
+
+    a {
+        font-size: 16px;
+        line-height: 22px;
+        color: #302447;
+
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+}

@@ -39,6 +39,16 @@ export const Contacts = () => {
             </div>
 
             <Socials />
+
+            <div className="author">
+              <a
+                href="http://sorcery.pro/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Unstable Sorcery
+              </a>
+            </div>
           </div>
           <div className="col mt50">
             <div className="avatar">
