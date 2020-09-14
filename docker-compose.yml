@@ -11,8 +11,6 @@ services:
       - LETSENCRYPT_HOST=n1kko777-dev.ru,www.n1kko777-dev.ru
       - LETSENCRYPT_EMAIL=webmaster@n1kko777-dev.ru
     restart: unless-stopped
-    ports:
-      - "3000:80"
 
 networks:
   default:
