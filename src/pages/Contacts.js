@@ -60,7 +60,7 @@ export const Contacts = () => {
         </div>
       </main>
 
-      <Mouse link="/portfolio" up={true} />
+      <Mouse link="/" up={true} />
     </Container>
   );
 };
