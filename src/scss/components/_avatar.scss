@@ -22,3 +22,26 @@
         }
     }
 }
+
+@media screen and (max-width: 1140px) {
+    .avatar {
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .avatar {
+        img {
+            height: 450px;
+        }
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .avatar {
+        img {
+            height: 300px;
+        }
+    }
+}

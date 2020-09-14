@@ -11,6 +11,14 @@
 
     position: relative;
 
+
+    img {
+        display: none;
+        width: 100%;
+        object-fit: contain;
+    }
+
+
     span {
         font-family: 'Nunito', sans-serif;
         font-weight: bold;
@@ -61,6 +69,35 @@
         &:nth-child(7) {
             top: 455px;
             left: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    .cloud {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .cloud {
+        width: 100%;
+        max-width: 750px;
+        min-height: 325px;
+        height: auto;
+        background: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+
+        position: relative;
+
+        img {
+            display: block;
+        }
+
+        span {
+            display: none;
         }
     }
 }

@@ -73,25 +73,35 @@ export const Portfolio = () => {
                 отделе «Мегасайт», так и на просторах фриланса.
               </p>
 
-              <h2 className="subtitle">Пульс Цен - Мегасайт:</h2>
-              <ul className="list">
-                <li>50+ проектов</li>
-              </ul>
+              <div className="description__column">
+                <div>
+                  <h2 className="subtitle">Пульс Цен - Мегасайт:</h2>
+                  <ul className="list">
+                    <li>50+ проектов</li>
+                  </ul>
+                </div>
 
-              <h2 className="subtitle">Freelance:</h2>
-              <ul className="list">
-                <li>10+ проектов</li>
-              </ul>
+                <div>
+                  <h2 className="subtitle">Freelance:</h2>
+                  <ul className="list">
+                    <li>10+ проектов</li>
+                  </ul>
+                </div>
 
-              <h2 className="subtitle">React:</h2>
-              <ul className="list">
-                <li>3+ проектов</li>
-              </ul>
+                <div>
+                  <h2 className="subtitle">React:</h2>
+                  <ul className="list">
+                    <li>7+ проектов</li>
+                  </ul>
+                </div>
 
-              <h2 className="subtitle">React Native:</h2>
-              <ul className="list">
-                <li>1+ проектов</li>
-              </ul>
+                <div>
+                  <h2 className="subtitle">React Native:</h2>
+                  <ul className="list">
+                    <li>1+ проектов</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div className="col">

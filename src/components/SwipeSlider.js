@@ -29,12 +29,33 @@ export const SwipeSlider = ({ images }) => {
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
-    beforeChange: function (currentSlide, nextSlide) {
-      console.log("before change", currentSlide, nextSlide);
-    },
-    afterChange: function (currentSlide) {
-      console.log("after change", currentSlide);
-    },
+    responsive: [
+      {
+        breakpoint: 1141,
+        settings: {
+          centerPadding: "0",
+          vertical: false,
+          slidesToShow: 2,
+          verticalSwiping: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+      // {
+      //   breakpoint: 480,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //   },
+      // },
+    ],
   };
   return (
     <>

@@ -9,3 +9,9 @@
     bottom: 10%;
     left: calc(50% - 10.56px);
 }
+
+@media screen and (max-width: 1140px) {
+    .mouse {
+        display: none;
+    }
+}

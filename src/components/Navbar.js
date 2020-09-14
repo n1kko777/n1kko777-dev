@@ -21,12 +21,25 @@ export const Navbar = () => {
       link: "/contacts",
     },
   ];
+
+  const [isOpen, setIsOpen] = React.useState(false);
+  const onMenuToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <header>
-      <nav>
-        <ul className="nav">
+    <header className="header">
+      <div
+        className={`menu-btn${isOpen ? " close" : ""}`}
+        onClick={onMenuToggle}
+      >
+        <div className="btn-line"></div>
+        <div className="btn-line"></div>
+        <div className="btn-line"></div>
+      </div>
+      <nav className={`menu${isOpen ? " show" : ""}`}>
+        <ul className={`nav`}>
           {menuList.map((item) => (
-            <li key={item.name}>
+            <li key={item.name} className={isOpen ? "show" : null}>
               <Link
                 className={location.pathname === item.link ? "active" : null}
                 to={item.link}

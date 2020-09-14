@@ -6,3 +6,26 @@
         text-decoration: underline;
     }
 }
+
+@media screen and (max-width: 1140px) {
+    .description {
+        &__column {
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 250px);
+            grid-gap: 0 30px;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .description {
+        margin-top: 20px;
+
+        &__column {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

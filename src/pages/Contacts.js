@@ -9,7 +9,7 @@ export const Contacts = () => {
   return (
     <Container>
       <main>
-        <div className="row">
+        <div className="row row--mobile-reverse">
           <div className="col">
             <h1 className="title">
               Мои <span>Контакты</span>
