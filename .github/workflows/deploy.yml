@@ -16,7 +16,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
-            cd /var/www/n1kko777-dev.ru
+            cd /home/tarasov_na/code/n1kko777-dev
             git fetch && git pull origin master
             docker-compose down
             docker-compose up --build -d
