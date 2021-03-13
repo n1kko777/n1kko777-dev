@@ -2,30 +2,36 @@ import React from "react";
 import { Container } from "../components/Container";
 import { Mouse } from "../components/Mouse";
 import { SwipeSlider } from "../components/SwipeSlider";
+import Cert1 from "../assets/img/sertificates/181418_536911.ru-1.jpg";
+import Cert2 from "../assets/img/sertificates/181418_574758.ru-1.jpg";
+import Cert3 from "../assets/img/sertificates/181418_574763.ru-1.jpg";
+import Cert4 from "../assets/img/sertificates/181418_589466.ru-1.jpg";
+import Cert5 from "../assets/img/sertificates/181418_633246.ru-1.jpg";
+import Cert6 from "../assets/img/sertificates/181418_796093.ru-1.jpg";
 
 const sertificates = [
   {
-    url: require("../assets/img/sertificates/181418_536911.ru-1.jpg"),
+    url: Cert1,
     alt: "",
   },
   {
-    url: require("../assets/img/sertificates/181418_574758.ru-1.jpg"),
+    url: Cert2,
     alt: "",
   },
   {
-    url: require("../assets/img/sertificates/181418_574763.ru-1.jpg"),
+    url: Cert3,
     alt: "",
   },
   {
-    url: require("../assets/img/sertificates/181418_589466.ru-1.jpg"),
+    url: Cert4,
     alt: "",
   },
   {
-    url: require("../assets/img/sertificates/181418_633246.ru-1.jpg"),
+    url: Cert5,
     alt: "",
   },
   {
-    url: require("../assets/img/sertificates/181418_796093.ru-1.jpg"),
+    url: Cert6,
     alt: "",
   },
 ];

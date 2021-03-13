@@ -2,57 +2,68 @@ import React from "react";
 import { Container } from "../components/Container";
 import { Mouse } from "../components/Mouse";
 import { SwipeSlider } from "../components/SwipeSlider";
+import Proj1 from "../assets/img/portfolio/portfolio-1.png";
+import Proj2 from "../assets/img/portfolio/portfolio-2.png";
+import Proj3 from "../assets/img/portfolio/portfolio-3.png";
+import Proj4 from "../assets/img/portfolio/portfolio-4.png";
+import Proj5 from "../assets/img/portfolio/portfolio-5.png";
+import Proj6 from "../assets/img/portfolio/portfolio-6.png";
+import Proj7 from "../assets/img/portfolio/portfolio-7.png";
+import Proj8 from "../assets/img/portfolio/portfolio-8.png";
+import Proj9 from "../assets/img/portfolio/portfolio-9.png";
+import Proj10 from "../assets/img/portfolio/portfolio-10.png";
+import Proj11 from "../assets/img/portfolio/portfolio-11.png";
 
 const sertificates = [
   {
-    url: require("../assets/img/portfolio/portfolio-1.png"),
+    url: Proj1,
     alt:
       "<a href='https://www.lesa59.ru/pages/13756-stroitelnye-lesa' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-2.png"),
+    url: Proj2,
     alt:
       "<a href='https://www.kompozit-tss.ru/pages/14670-truby' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-3.png"),
+    url: Proj3,
     alt:
       "<a href='https://www.rifgrad.ru/pages/16235-podbor-produktsii' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-4.png"),
+    url: Proj4,
     alt:
       "<a href='https://www.optovent.ru/pages/17571-podbor-ventilyatsionnyh-ustanovok' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-5.png"),
+    url: Proj5,
     alt:
       "<a href='https://testovy-sait-175.pulscen.ru/pages/17807-kviz' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-6.png"),
+    url: Proj6,
     alt:
       "<a href='https://wallet.n1kko777-dev.ru/' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-7.png"),
+    url: Proj7,
     alt:
       "<a href='https://sl.n1kko777-dev.ru/' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-8.png"),
+    url: Proj8,
     alt: "<a href='https://mncntrl.ru/' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-9.png"),
+    url: Proj9,
     alt: "<a href='http://sorcery.pro/' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-10.png"),
+    url: Proj10,
     alt: "<a href='http://janedragon.ru/' target='_blank'>Посмотреть сайт</a>",
   },
   {
-    url: require("../assets/img/portfolio/portfolio-11.png"),
+    url: Proj11,
     alt:
       "<a href='http://xn-----7kcbcgsfvgwpbukjr6bel6c0h4d.xn--p1ai/' target='_blank'>Посмотреть сайт</a>",
   },
