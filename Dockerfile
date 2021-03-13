@@ -5,7 +5,12 @@
 # these are what will be served by nginx
 # use alias build to be easier to refer this container elsewhere
 # e.g inside nginx container
-FROM node:10.15.0-alpine as build
+FROM node:alpine as build
+# install nessesery dependencies
+RUN apk add --no-cache --virtual .gyp \
+        python \
+        make \
+        g++
 # set working directory
 # this is the working folder in the container
 # from which the app will be running from
@@ -19,6 +24,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 RUN yarn
 #build the project for production
 RUN yarn build
+# Delete dev dependencies
+RUN apk del .gyp
 
 # set up production environment
 # the base image for this is an alpine based nginx image
