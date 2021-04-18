@@ -43,27 +43,42 @@ export const About = () => {
         <div className="row">
           <div className="col">
             <h1 className="title">
-              Мои <span>Навыки</span>
+              Обо <span>Мне</span>
             </h1>
             <div className="description">
               <p>
-                Не стою на месте, прогрессирую день за днем. Ответственный,
-                <br />
-                честный, любящий своё дело профессионал.
+                Добрый день! В сфере web-разработки я нахожусь более 2 лет, за
+                это время изучил и освоил принципы и методологию разработки
+                сайтов, которые решают проблемы многих людей. Благодаря
+                возможности одинаково удобно открывать сайты не только на
+                компьютере, но и на телефоне, вашим продуктом могут
+                воспользоваться в любой ситуации. Не стою на месте, прогрессирую
+                день за днем. Ответственный, честный, люблю своё дело! Жду ваших
+                предложений, а также дальнейшего сотрудничества.
               </p>
 
-              <h2 className="subtitle">Hard skills:</h2>
-              <ul className="list">
-                <li>Html (Pug)</li>
-                <li>Css (LESS/SCSS)</li>
-                <li>Javascript</li>
-                <li>Jquery</li>
-                <li>Gulp</li>
-                <li>Git</li>
-                <li>Photoshop (верстка PSD макетов)</li>
-                <li>Адаптация под любые экраны</li>
-                <li>Возможность отображения во многих браузерах</li>
-              </ul>
+              <h2 className="subtitle">Мои навыки:</h2>
+              <div className="list">
+                <div className="list__item">Html (pug)</div>
+                <div className="list__item">CSS (LESS/SCSS)</div>
+                <div className="list__item">Gulp</div>
+                <div className="list__item">Jquery</div>
+              </div>
+              <div className="list">
+                <div className="list__item">Git</div>
+                <div className="list__item">Javascript</div>
+                <div className="list__item">
+                  Photoshop (Вёрстка PSD макетов)
+                </div>
+              </div>
+              <div className="list">
+                <div className="list__item">
+                  Возможность отображения во многих браузерах{" "}
+                </div>
+              </div>
+              <div className="list">
+                <div className="list__item">Адаптация под любые экраны</div>
+              </div>
             </div>
           </div>
           <div className="col">
