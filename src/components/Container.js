@@ -1,16 +1,20 @@
 import React from "react";
 import { Navbar } from "./Navbar";
 import { useLocation } from "react-router-dom";
-export const Container = ({ children }) => {
+
+const MAIN_BG_PAGE = ["/", "/about", "/portfolio"];
+
+export const Container = ({ children, isNavbar = true }) => {
   const location = useLocation();
+
   return (
     <div
       className={`container-bg container-bg--${
-        location.pathname === "/contacts" ? "footer" : "main"
+        MAIN_BG_PAGE.includes(location.pathname) ? "main" : "footer"
       }`}
     >
       <div className="wrapper">
-        <Navbar />
+        {isNavbar ? <Navbar /> : null}
         {children}
       </div>
     </div>

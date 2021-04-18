@@ -6,6 +6,7 @@ import { Portfolio } from "./pages/Portfolio";
 import { Contacts } from "./pages/Contacts";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
+import { PageNotFound } from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/contacts" component={Contacts} />
+          <Route component={PageNotFound} />
         </Switch>
       </BrowserRouter>
     </SimpleBar>
