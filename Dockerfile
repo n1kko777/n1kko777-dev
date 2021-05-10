@@ -5,7 +5,7 @@
 # these are what will be served by nginx
 # use alias build to be easier to refer this container elsewhere
 # e.g inside nginx container
-FROM node:alpine as build
+FROM node:15-alpine3.11 as build
 # install nessesery dependencies
 RUN apk add --no-cache --virtual .gyp \
         python \
