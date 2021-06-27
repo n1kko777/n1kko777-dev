@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -21,11 +21,26 @@ export const Navbar = () => {
       link: "/contacts",
     },
   ];
+  const history = useHistory();
 
   const [isOpen, setIsOpen] = React.useState(false);
   const onMenuToggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const onItemClick = (e) => {
+    const targetLink = e.target.getAttribute("href");
+    if (isOpen) {
+      e.preventDefault();
+      onMenuToggle();
+      setTimeout(() => {
+        history.push(targetLink);
+      }, 300);
+    } else {
+      history.push(targetLink);
+    }
+  };
+
   return (
     <header className="header">
       <div
@@ -43,6 +58,7 @@ export const Navbar = () => {
               <Link
                 className={location.pathname === item.link ? "active" : null}
                 to={item.link}
+                onClick={onItemClick}
               >
                 {item.name}
               </Link>

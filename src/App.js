@@ -5,7 +5,6 @@ import { About } from "./pages/About";
 import { Portfolio } from "./pages/Portfolio";
 import { Contacts } from "./pages/Contacts";
 import SimpleBar from "simplebar-react";
-import "simplebar/dist/simplebar.min.css";
 import { PageNotFound } from "./pages/PageNotFound";
 
 function App() {
