@@ -5,7 +5,7 @@
 }
 
 .slide {
-  height: 210px;
+  height: 310px;
   border-radius: 20px;
   margin: 10px;
   cursor: zoom-in;
@@ -20,5 +20,15 @@
 
   &.active {
     cursor: default;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .slide {
+    height: 210px;
+
+    &.active {
+      flex: 5 !important;
+    }
   }
 }

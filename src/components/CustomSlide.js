@@ -6,7 +6,7 @@ export const CustomSlide = memo(
       className={`slide ${isActive ? "active" : ""}`}
       style={{
         backgroundImage: `url(${data.imgUrl})`,
-        flex: isActive ? imagesCount || 1 : 1,
+        flex: isActive ? 3 : 1,
       }}
       onClick={onItemClick}
       data-index={index}
