@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import "simplebar/dist/simplebar.min.css";
 import "./scss/index.scss";
 
 import App from "./App";
