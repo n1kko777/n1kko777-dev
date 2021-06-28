@@ -1,125 +1,127 @@
 .menu-btn,
 .menu-btn .btn-line,
 .menu-nav {
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .menu-btn {
-    display: none;
-    position: absolute;
-    z-index: 3;
-    right: 35px;
-    top: 25px;
-    cursor: pointer;
-    z-index: 130;
+  display: none;
+  position: absolute;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+  z-index: 130;
 }
 
 .menu-btn .btn-line {
-    width: 28px;
-    height: 3px;
-    background-color: #fff;
-    margin: 0 0 5px;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  margin: 0 0 5px;
 }
 
 .menu-btn.close {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .menu-btn.close .btn-line:nth-child(1) {
-    -webkit-transform: rotate(45deg) translate(5px, 5px);
-    transform: rotate(45deg) translate(5px, 5px);
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .menu-btn.close .btn-line:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .menu-btn.close .btn-line:nth-child(3) {
-    -webkit-transform: rotate(-45deg) translate(7px, -6px);
-    transform: rotate(-45deg) translate(7px, -6px);
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 70px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 70px;
 
-    li {
-        &+li {
-            margin-left: 60px;
-        }
-
-        a {
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 25px;
-            text-transform: uppercase;
-            color: $white;
-
-            padding-bottom: 7px;
-            position: relative;
-
-            &:hover:before,
-            &.active:before {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 2px;
-
-                background: #3ddeed;
-                box-shadow: 0px 0px 10px rgba(61, 222, 237, 0.5);
-                border-radius: 3px;
-
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
-        }
+  li {
+    & + li {
+      margin-left: 60px;
     }
+
+    a {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: $white;
+
+      padding-bottom: 7px;
+      position: relative;
+
+      &:hover:before,
+      &.active:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background: #3ddeed;
+        box-shadow: 0px 0px 10px rgba(61, 222, 237, 0.5);
+        border-radius: 3px;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1140px) {
-    .menu {
-        margin-bottom: 10px;
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    }
+  .menu {
+    margin-bottom: 10px;
+  }
 
-    .menu.show {
-        visibility: visible;
-        opacity: 1;
-    }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 120;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-9999999px, -9999999px);
+    transition: opacity 0.3s ease-out, transform 0s ease 1s;
 
+    li {
+      & + li {
+        margin-left: 0;
+        margin-top: 55px;
+      }
+
+      a {
+        font-size: 3em;
+      }
+    }
+  }
+
+  .menu.show {
     .nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 120;
-        overflow: hidden;
-
-        li {
-            &+li {
-                margin-left: 0;
-                margin-top: 55px;
-            }
-
-            a {
-                font-size: 3em;
-            }
-        }
+      opacity: 1;
+      transform: translate(0, 0);
+      transition: opacity 0.3s ease-in;
     }
+  }
 
-    .menu-btn {
-        display: block;
-    }
+  .menu-btn {
+    display: block;
+  }
 }
