@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "../components/Container";
 import { Mouse } from "../components/Mouse";
+import { PatreonButton } from "../components/PatreonButton";
 
 export const About = () => {
   return (
@@ -38,6 +39,26 @@ export const About = () => {
             <div className="list__item">
               Адаптивная, кроссбраузерная верстка
             </div>
+          </div>
+
+          <div className="donate">
+            <h2 className="subtitle">
+              Тех. поддержка Вашего сайта за&nbsp;<strong>$10</strong>
+              &nbsp;месяц:
+            </h2>
+            <PatreonButton />
+            <h2 className="subtitle">Донат:</h2>
+            <a
+              href="https://www.buymeacoffee.com/n1kko777"
+              target="_blank"
+              rel="noreferrer"
+              className="buy-me-a-coffee"
+            >
+              <img
+                src="https://cdn.buymeacoffee.com/buttons/default-orange.png"
+                alt="Buy Me A Coffee"
+              />
+            </a>
           </div>
         </div>
       </main>
