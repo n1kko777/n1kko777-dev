@@ -124,6 +124,10 @@ p {
   line-height: 33px;
 
   color: $white;
+
+  a {
+    color: #3ddeed;
+  }
 }
 
 .simplebar-scrollbar::before {
