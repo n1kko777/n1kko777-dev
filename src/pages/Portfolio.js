@@ -1,44 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import SimpleBar from "simplebar-react";
+import sanityClient from "../client";
 import { Container } from "../components/Container";
 import { Mouse } from "../components/Mouse";
 import { SwipeSlider } from "../components/SwipeSlider";
-import SimpleBar from "simplebar-react";
-
-import Proj5 from "../assets/img/portfolio/portfolio-5.png";
-import Proj8 from "../assets/img/portfolio/portfolio-8.png";
-import Proj9 from "../assets/img/portfolio/portfolio-9.png";
-import Proj10 from "../assets/img/portfolio/portfolio-10.png";
-import Proj12 from "../assets/img/portfolio/portfolio-12.png";
-
-const portfolios = [
-  {
-    imgUrl: Proj12,
-    link: "/portfolio/12",
-    alt: "<a href='https://xn--96-4lcxfg8dya.xn--p1ai/' target='_blank'>Посмотреть сайт</a>",
-  },
-  {
-    imgUrl: Proj9,
-    link: "/portfolio/9",
-    alt: "<a href='http://sorcery.pro/' target='_blank'>Посмотреть сайт</a>",
-  },
-  {
-    imgUrl: Proj10,
-    link: "/portfolio/10",
-    alt: "<a href='http://janedragon.ru/' target='_blank'>Посмотреть сайт</a>",
-  },
-  {
-    imgUrl: Proj8,
-    link: "/portfolio/8",
-    alt: "<a href='https://mncntrl.ru/' target='_blank'>Посмотреть сайт</a>",
-  },
-  {
-    imgUrl: Proj5,
-    link: "/portfolio/5",
-    alt: "<a href='https://testovy-sait-175.pulscen.ru/pages/17807-kviz' target='_blank'>Посмотреть сайт</a>",
-  },
-];
 
 export const Portfolio = () => {
+  const [portfolioData, setPortfolioData] = useState([]);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "portfolio"] | order(_createdAt desc){
+      slug,
+      mainImage{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      }
+    }`
+      )
+      .then((data) =>
+        setPortfolioData(
+          data.map((el) => ({
+            imgUrl: el.mainImage.asset.url,
+            link: `/portfolio/${el.slug.current}`,
+            alt: el.mainImage.asset.alt,
+          }))
+        )
+      )
+      .catch(console.error);
+  }, []);
+
   return (
     <Container>
       <main>
@@ -50,9 +45,20 @@ export const Portfolio = () => {
             С 2018 года разработал множество проектов как на Пульсе Цен в отделе
             «Мегасайт», так и на просторах фриланса.
           </p>
+          <p>
+            Больше проектов можно найти тут:{" "}
+            <a
+              href="https://github.com/n1kko777"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
+            .
+          </p>
         </div>
         <SimpleBar>
-          <SwipeSlider images={portfolios} />
+          <SwipeSlider images={portfolioData} />
         </SimpleBar>
         <div className="description">
           <div className="row row--line">
