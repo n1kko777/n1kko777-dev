@@ -56,7 +56,13 @@ export const Navbar = () => {
           {menuList.map((item) => (
             <li key={item.name} className={isOpen ? "show" : null}>
               <Link
-                className={location.pathname === item.link ? "active" : null}
+                className={
+                  location.pathname === item.link ||
+                  (item.link === "/portfolio" &&
+                    new RegExp(item.link).test(location.pathname))
+                    ? "active"
+                    : null
+                }
                 to={item.link}
                 onClick={onItemClick}
               >

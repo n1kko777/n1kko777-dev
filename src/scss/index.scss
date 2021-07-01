@@ -126,6 +126,10 @@ p {
   color: $white;
 }
 
+.link {
+  text-decoration: underline;
+}
+
 .simplebar-scrollbar::before {
   background-color: transparent;
 }
@@ -150,6 +154,8 @@ p {
     width: 11rem;
     height: 34px;
     display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -203,6 +209,10 @@ p {
         margin-bottom: 15px;
       }
     }
+  }
+
+  .project {
+    padding-bottom: 20%;
   }
 }
 
