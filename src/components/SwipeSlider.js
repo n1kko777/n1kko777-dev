@@ -1,23 +1,23 @@
 import React, { useCallback, useMemo, useState } from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { CustomSlide } from "./CustomSlide";
 
 export const SwipeSlider = ({ images }) => {
-  // const history = useHistory();
+  const history = useHistory();
   const [activeSlide, setActiveSlide] = useState(0);
 
   const onSlideClick = useCallback(
     (event) => {
       const targetIndex = Number(event.target.dataset.index);
-      // const targetLink = event.target.dataset.link;
+      const targetLink = event.target.dataset.link;
 
       if (targetIndex === activeSlide) {
-        // history.push(targetLink);
+        history.push(targetLink);
       } else {
         setActiveSlide(targetIndex);
       }
     },
-    [activeSlide]
+    [activeSlide, history]
   );
 
   const memoSlides = useMemo(

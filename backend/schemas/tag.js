@@ -1,0 +1,14 @@
+const tag = {
+  name: "tag",
+  title: "Tags",
+  type: "document",
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+  ],
+};
+
+export default tag;

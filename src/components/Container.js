@@ -10,7 +10,10 @@ export const Container = ({ children, isNavbar = true }) => {
   return (
     <div
       className={`container-bg container-bg--${
-        MAIN_BG_PAGE.includes(location.pathname) ? "main" : "footer"
+        MAIN_BG_PAGE.includes(location.pathname) ||
+        new RegExp("/portfolio/").test(location.pathname)
+          ? "main"
+          : "footer"
       }`}
     >
       <div className="wrapper">
