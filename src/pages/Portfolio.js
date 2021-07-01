@@ -51,6 +51,7 @@ export const Portfolio = () => {
               href="https://github.com/n1kko777"
               target="_blank"
               rel="noreferrer"
+              className="link"
             >
               Github
             </a>

@@ -126,6 +126,10 @@ p {
   color: $white;
 }
 
+.link {
+  text-decoration: underline;
+}
+
 .simplebar-scrollbar::before {
   background-color: transparent;
 }
