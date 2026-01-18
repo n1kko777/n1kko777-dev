@@ -6,7 +6,7 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.11.0",
     "animate.css": "^4.1.1",
-    "node-sass": "^6.0.1",
+    "sass": "^1.70.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "node server.js",
-    "build": "react-scripts build"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
